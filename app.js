@@ -2,7 +2,7 @@
 
 var name = prompt('Hello, what is your name?');
 alert("Welcome " + name + ", Lets see if you can answer few questions " +
-"about me. You can just answer by typing yes or no.");
+    "about me. You can just answer by typing yes or no.");
 
 var age = prompt('Am I 35 years old?');
 // console.log('Age:', age);
@@ -46,7 +46,7 @@ if (states === 'NO') {
 
 var language = prompt('Do I speak 4 languages?');
 // console.log('Time:', time);
-time = time.toUpperCase();
+language = language.toUpperCase();
 
 if (language === 'YES') {
     alert("That's correct.");

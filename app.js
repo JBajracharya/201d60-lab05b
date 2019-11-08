@@ -14,24 +14,24 @@ seventhQuestion();
 
 // First Question
 
+var counter = 0;
 
-function firstQuestion(){
-    var counter = 0;
+function firstQuestion() {
 
- var name = prompt('Hello, what is your name?');
-alert("Welcome " + name + ", Lets see if you can answer few questions " +
-    "about me. You can just answer by typing yes or no.");
+    var name = prompt('Hello, what is your name?');
+    alert("Welcome " + name + ", Lets see if you can answer few questions " +
+        "about me. You can just answer by typing yes or no.");
 
-var age = prompt('Am I 35 years old?');
-console.log('Age:', age);
-age = age.toUpperCase();
+    var age = prompt('Am I 35 years old?');
+    console.log('Age:', age);
+    age = age.toUpperCase();
 
-if (age === 'NO') {
-    alert("That's correct.");
-    counter++;
-} else {
-    alert("I'm 31 years old");
-}
+    if (age === 'NO') {
+        alert("That's correct.");
+        counter++;
+    } else {
+        alert("I'm 31 years old");
+    }
 
 }
 
@@ -42,10 +42,10 @@ function secondQuestion() {
     color = color.toUpperCase();
 
     if (color === 'NO') {
-    alert("That's correct.");
-    counter++;
+        alert("That's correct.");
+        counter++;
     } else {
-    alert('My favorite color is blue.');
+        alert('My favorite color is blue.');
     }
 
 }
@@ -55,7 +55,7 @@ function thirdQuestion() {
     var country = prompt('Did i grow up in Malaysia?');
     console.log('Country:', country);
     country = country.toUpperCase();
-    
+
     if (country === 'NO') {
         alert("That's correct.");
         counter++;
@@ -71,14 +71,14 @@ function fourthQuestion() {
     var states = prompt('Have I travelled to more than 40 states?');
     console.log('States:', states);
     states.toUpperCase();
-    
+
     if (states === 'NO') {
         alert("That's right.");
         counter++;
     } else {
         alert("I have visited 15 states.");
     }
-    
+
 
 }
 
@@ -87,79 +87,76 @@ function fourthQuestion() {
 
 function fifthQuestion() {
     var language = prompt('Do I speak 4 languages?');
-    console.log('Time:', time);
+    console.log('Language:', language);
     language = language.toUpperCase();
 
     if (language === 'YES') {
         alert("That's correct.");
-    counter++;
+        counter++;
     } else {
         alert("I speak 4 languages.");
-    } 
+    }
 }
 
 
 // Sixth Question
 
 function sixthQuestion() {
-    var farr  = prompt('werharehes');
-    for (var i = 1; i <= 4; i++) {
-    var number = parseInt(prompt('Can you guess a correct number? You only get 4 tries' +
-        'to answer this question?'));
-    console.log(number);
 
-    if (number === 42) {
-        alert('you guessed it right. Its 42');
-        counter++;
-        break;
-    } else if (number < 42) {
-        alert('Its too high. Try again');
-    } else if (number > 42) {
-        alert("It's too high. Try again");
-    } else {
-        alert("The correct number is 42");
-    }
-}
-}
-
-// Seventh Question
-
-function seventhQuestion() {
-    var arr = ['squash', 'mango', 'banana', 'orange'];
-
-    for (var i = 1; i <= 7; i++) {
-        if (i === 7) {
-            alert('You used all 6 tries. Correct answers are' +
-                ' squash, mango, banana and orange.');
+    for (var i = 1; i <= 5; i++) {
+        var number = parseInt(prompt('Can you guess a correct number? You only get 4 tries ' +
+            'to answer this question?'));
+        console.log(number);
+        if (i === 5) {
+            alert("You used all 4 tries. The correct answer is 42")
         }
-        var guess = prompt("What is the food that I do not like to eat?" +
-            "You have 6 tries to answer this.");
-        console.log('guess' + [i] + ':', guess);
-        
-    
-        for (var j = 0; j < arr.length; i++) {
-    
-            if (guess === arr[j]) {
-                alert('Yes that is correct. Squash, mango, banana and orange' +
-                    'are the food that I dont like');
-                counter++;
-                var flag = true;
-                break;
-    
-                /*
-                  var flag = true;;
-                return true;
-                use this as an example to validate your loop.
-                */
-            }
-    
-        }
-        if (flag) {
+
+        if (number === 42) {
+            alert('you guessed it right. Its 42');
+            counter++;
             break;
+        } else if (number < 42) {
+            alert('Its too low. Try again');
+        } else {
+            alert("It's too high. Try again");
         }
-        console.log('counter:', counter);
-    
     }
-    
-     
+
+    // Seventh Question
+
+    function seventhQuestion() {
+
+        var arr = ['squash', 'mango', 'banana', 'orange'];
+
+        for (var i = 1; i <= 7; i++) {
+            if (i === 7) {
+                alert('You used all 6 tries. Correct answers are' +
+                    ' squash, mango, banana and orange.');
+            }
+            var guess = prompt("What is the food that I do not like to eat?" +
+                "You have 6 tries to answer this.");
+            console.log('guess' + [i] + ':', guess);
+
+
+            for (var j = 0; j < arr.length; i++) {
+
+                if (guess === arr[j]) {
+                    alert('Yes that is correct. Squash, mango, banana and orange' +
+                        'are the food that I dont like');
+                    counter++;
+                    var flag = true;
+                    break;
+
+                }
+
+            }
+            if (flag) {
+                break;
+            }
+        }
+
+        alert('You answered' + counter + 'out of 7 questions');
+
+    }
 }
+

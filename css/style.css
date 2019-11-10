@@ -1,0 +1,22 @@
+body {
+    background: #dfe6df;
+}
+
+#welcome {
+    text-align: center;
+    color:#2d8fad;
+    size: 2em;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #2d8fad;
+
+}
+
+p {
+    size: 2em;
+    border-style: solid;
+    border-color: #2d8fad;
+}

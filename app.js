@@ -12,9 +12,10 @@ seventhQuestion();
 
 
 
-// First Question
+// // First Question
 
 var counter = 0;
+console.log(counter);
 
 function firstQuestion() {
 
@@ -27,29 +28,31 @@ function firstQuestion() {
     age = age.toUpperCase();
 
     if (age === 'NO') {
-        alert("That's correct.");
+        alert("That's correct. I'm 31 years old.");
         counter++;
+        console.log(counter);
     } else {
         alert("I'm 31 years old");
     }
 
 }
 
-// Second Question
+// // Second Question
 function secondQuestion() {
     var color = prompt('Is orange my favorite color?');
     console.log('Food:', color);
     color = color.toUpperCase();
 
     if (color === 'NO') {
-        alert("That's correct.");
+        alert("That's correct. It's blue.");
         counter++;
+        console.log(counter);
     } else {
         alert('My favorite color is blue.');
     }
 
 }
-// Third Question
+// // Third Question
 
 function thirdQuestion() {
     var country = prompt('Did i grow up in Malaysia?');
@@ -57,7 +60,7 @@ function thirdQuestion() {
     country = country.toUpperCase();
 
     if (country === 'NO') {
-        alert("That's correct.");
+        alert("That's correct. I grew up in Nepal.");
         counter++;
     } else {
         alert("No, I grew up in Nepal.");
@@ -65,7 +68,7 @@ function thirdQuestion() {
 
 }
 
-// Fourth Question
+// // Fourth Question
 
 function fourthQuestion() {
     var states = prompt('Have I travelled to more than 40 states?');
@@ -73,7 +76,7 @@ function fourthQuestion() {
     states.toUpperCase();
 
     if (states === 'NO') {
-        alert("That's right.");
+        alert("That's right. I have travelled to only 15 states.");
         counter++;
     } else {
         alert("I have visited 15 states.");
@@ -83,7 +86,7 @@ function fourthQuestion() {
 }
 
 
-// Fifth Question
+// // Fifth Question
 
 function fifthQuestion() {
     var language = prompt('Do I speak 4 languages?');
@@ -99,7 +102,7 @@ function fifthQuestion() {
 }
 
 
-// Sixth Question
+// // Sixth Question
 
 function sixthQuestion() {
 
@@ -109,6 +112,7 @@ function sixthQuestion() {
         console.log(number);
         if (i === 5) {
             alert("You used all 4 tries. The correct answer is 42")
+            break;
         }
 
         if (number === 42) {
@@ -121,42 +125,45 @@ function sixthQuestion() {
             alert("It's too high. Try again");
         }
     }
+}
 
-    // Seventh Question
-
-    function seventhQuestion() {
-
-        var arr = ['squash', 'mango', 'banana', 'orange'];
-
-        for (var i = 1; i <= 7; i++) {
-            if (i === 7) {
-                alert('You used all 6 tries. Correct answers are' +
-                    ' squash, mango, banana and orange.');
-            }
-            var guess = prompt("What is the food that I do not like to eat?" +
-                "You have 6 tries to answer this.");
-            console.log('guess' + [i] + ':', guess);
+// Seventh Question
 
 
-            for (var j = 0; j < arr.length; i++) {
-
-                if (guess === arr[j]) {
-                    alert('Yes that is correct. Squash, mango, banana and orange' +
-                        'are the food that I dont like');
-                    counter++;
-                    var flag = true;
-                    break;
-
-                }
-
-            }
-            if (flag) {
+function seventhQuestion() {
+    
+    var arr = ['squash', 'egg plant', 'cabbage', 'tomato'];
+    
+    for (var i = 1; i <= 7; i++) {
+        if (i === 7) {
+            alert('You used all 6 tries. Correct answers are' +
+            ' squash, mango, banana and orange.');
+            break;
+        }
+        var guess = prompt("What are the vegetables that I do not like to eat?" +
+        "You have 6 tries to answer this.");
+        // console.log('guess' + [i] + ':', guess);
+        
+        
+        for (var j = 0; j < arr.length; j++) {
+            if (guess === arr[j]) {
+                alert('Yes that is correct. Squash, egg plant, cabbage and tomato' +
+                ' are the vegetables that I dont like.');
+                counter++;
+                i = 7;
+                break;
+                
+            } else {
+                alert("That's incorrect. Try again.");
                 break;
             }
+            
         }
-
-        alert('You answered' + counter + 'out of 7 questions');
-
+        
     }
+    
+    
 }
+alert(name + ', You answered ' + counter + ' out of 7 questions. Thank you for participating.');
+
 
